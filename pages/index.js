@@ -11,8 +11,8 @@ const Home = () => (
     <Head title="DevMap Podcast" />
     <Nav />
 
-    <div className="hero">
-      
+    <div className="container">
+      <img src="../static/Dev-Map-Logo.png" className="heroImage" />
       <h1 className="title">Welcome to DevMap!</h1>
       <p className="description">
         The Podcast for Junior Developers and the cure for Imposter Syndrome
@@ -38,9 +38,25 @@ const Home = () => (
     </div>
 
     <style jsx>{`
-      .hero {
+      .container {
         width: 100%;
         color: #333;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(6 1fr);
+		grid-template-areas:
+		  ". logo logo ." 
+          ". info info ."
+          ". episodes episodes .";
+
+        justify-content: center;
+        align-content: center;
+      }
+      .heroImage {
+        height: 300px;
+		grid-area: logo;
+		justify-self: center;
+		align-self: center;
       }
       .title {
         margin: 0;
@@ -52,13 +68,16 @@ const Home = () => (
       .title,
       .description {
         text-align: center;
+        color: #ffffff;
+        grid-area: info;
       }
       .row {
         max-width: 880px;
         margin: 80px auto 40px;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+		justify-content: space-around;
+		grid-area: episodes;
       }
       .card {
         padding: 18px 18px 24px;

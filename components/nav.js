@@ -34,7 +34,7 @@ const Nav = () => (
         margin: 0;
         padding: 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-        background: #303030;
+        background: #423c3c;
       }
       nav {
         text-align: center;
