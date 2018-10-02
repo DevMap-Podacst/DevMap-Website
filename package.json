@@ -1,5 +1,5 @@
 {
-  "name": "devmappodcast-website",
+  "name": "devmap-podcast-website",
   "scripts": {
     "dev": "next",
     "build": "next build",
