@@ -2,7 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 
 const links = [
-  { href: 'https://github.com/segmentio/create-next-app', label: 'Github' }
+  { href: 'https://anchor.fm/devmappodcast', label: 'Anchor.FM' },
+  { href: 'https://www.stitcher.com/podcast/anchor-podcasts/devmap-podcast', label: 'Stitcher'}
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
@@ -17,6 +18,7 @@ const Nav = () => (
         </Link>
       </li>
       <ul>
+        <li>Listen on:</li>
         {links.map(({ key, href, label }) => (
           <li key={key}>
             <Link href={href}>
@@ -30,8 +32,9 @@ const Nav = () => (
     <style jsx>{`
       :global(body) {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+        background: #303030;
       }
       nav {
         text-align: center;
@@ -46,11 +49,16 @@ const Nav = () => (
       li {
         display: flex;
         padding: 6px 8px;
+        color: #ffffff;
+        font-size: 1.25rem;
       }
       a {
-        color: #067df7;
+        color: #ffffff;
         text-decoration: none;
-        font-size: 13px;
+        font-size: 1.25rem;
+      }
+      a:hover {
+        text-decoration: underline;
       }
     `}</style>
   </nav>
