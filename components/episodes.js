@@ -10,7 +10,7 @@ const Episodes = () => (
               .row {
                 display: grid;
                 grid-template-rows: auto;
-                grid-template-columns: repeat(6 1fr);
+                grid-template-columns: repeat(6, 1fr);
                 grid-template-areas:
                   ". logo logo ." 
                   ". info info ."
