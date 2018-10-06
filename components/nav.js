@@ -30,11 +30,15 @@ const Nav = () => (
     </ul>
 
     <style jsx>{`
-      :global(body) {
+      :globa;(html) {
         margin: 0;
         padding: 0;
+        box-sixing: border-box;
+      }
+      :global(body) {
         font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-        background: #423c3c;
+        font-size: 16px;
+        background: #1E1E1E;
       }
       nav {
         text-align: center;
