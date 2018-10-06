@@ -1,21 +1,11 @@
 import Link from 'next/link'
 
-const EpisodeLinks = [
-    { 
-      href: 'https://anchor.fm/devmappodcast/episodes/000---Pilot-e2aljl/a-a5jass',
-      title: "Episode 000 => Pilot"
-    }
-  ].map( episode => {
-    episode.key = `nav-link-${episode.href}-${episode.title}`
-    return episode
-  })
-
 const Episodes = () => (
-  EpisodeLinks.map( ({key, href, title}) => (
-          <div key={key} className="row">
-            <Link href={href}>
-              <a>{title}</a>
-            </Link>
+          <div className="row">
+            <iframe 
+            src="https://anchor.fm/devmappodcast/embed/episodes/000---Pilot-e2aljl/a-a5jass"
+            className="card" scrolling="no"></iframe>
+          
             <style jsx global>{`
               .row {
                 display: grid;
@@ -34,30 +24,15 @@ const Episodes = () => (
                 justify-content: space-around;
               }
               .card {
-                padding: 18px 18px 24px;
-                width: 220px;
-                text-align: left;
-                text-decoration: none;
-                color: #434343;
-                border: 1px solid #9b9b9b;
+                padding: 18px 18px;
+                width: 90vw;
+                max-width: 500px;
+                height: 100px;
+                border: 0;        
               }
-              .card:hover {
-                border-color: #067df7;
-              }
-              .card h3 {
-                margin: 0;
-                color: #067df7;
-                font-size: 18px;
-              }
-              .card p {
-                margin: 0;
-                padding: 12px 0 0;
-                font-size: 13px;
-                color: #333;
-              }
+              
             `}</style>
           </div>
-        ))
 )
 
 export default Episodes
