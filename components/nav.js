@@ -27,8 +27,10 @@ const Nav = () => (
         <li>Listen on:</li>
         {links.map(({ key, href, label }) => (
             <li key={key}>
-              <Link href={href}>
-                <a>{label}</a>
+              <Link href={href} alt={label}>
+                <a>
+                  <image src="" />
+                </a>
               </Link>
             </li>
         ))}
