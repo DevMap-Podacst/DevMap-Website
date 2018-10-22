@@ -2,17 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 
 const links = [
-  { href: 'https://anchor.fm/devmappodcast', label: 'Anchor.FM' },
+  { href: 'https://anchor.fm/devmappodcast', label: 'Anchor.FM', image: '/static/anchor.png' },
   { href: 'https://www.stitcher.com/podcast/anchor-podcasts/devmap-podcast', label: 'Stitcher'},
-  // { href: 'https://www.breaker.audio/devmap-podcast', label: 'Breaker'},
-  // { href: 'https://open.spotify.com/show/1V8gY5mZUsVdE0VAujPD1C', label: 'Spotify'},
-  // { href: 'https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy83MGI0YWY4L3BvZGNhc3QvcnNz', label: 'Google Podcasts'},
-  // { href: 'https://castbox.fm/channel/id1446889', label: 'Castbox'},
-  // { href: 'https://pca.st/g9Fg', label: 'Pocket Casts'}
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
+  { href: 'https://www.breaker.audio/devmap-podcast', label: 'Breaker'},
+  { href: 'https://open.spotify.com/show/1V8gY5mZUsVdE0VAujPD1C', label: 'Spotify'},
+  { href: 'https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy83MGI0YWY4L3BvZGNhc3QvcnNz', label: 'Google Podcasts'},
+  { href: 'https://castbox.fm/channel/id1446889', label: 'Castbox'},
+  { href: 'https://pca.st/g9Fg', label: 'Pocket Casts'}
+]
 
 
 const Nav = () => (
@@ -25,11 +22,11 @@ const Nav = () => (
       </li>
       <ul className='pcast-AppsList'>
         <li>Listen on:</li>
-        {links.map(({ key, href, label }) => (
+        {links.map(({ key, href, label, image }) => (
             <li key={key}>
-              <Link href={href} alt={label}>
+              <Link href={href}>
                 <a>
-                  <image src="" />
+                  <image src={image} alt={label} />
                 </a>
               </Link>
             </li>
@@ -38,7 +35,7 @@ const Nav = () => (
     </ul>
 
     <style jsx>{`
-      :globa;(html) {
+      :global(html) {
         margin: 0;
         padding: 0;
         box-sixing: border-box;
