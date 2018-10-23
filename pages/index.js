@@ -1,11 +1,8 @@
 import React from 'react'
-import Link from 'next/link'
 import Head from '../components/head'
 import Nav from '../components/nav'
 import Title from '../components/title'
 import Episodes from '../components/episodes'
-
-
 
 const Home = () => (
   <div>
