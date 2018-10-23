@@ -3,12 +3,14 @@ import Link from 'next/link'
 
 const links = [
   { href: 'https://anchor.fm/devmappodcast', label: 'Anchor.FM', image: '/static/anchor.png' },
-  { href: 'https://www.stitcher.com/podcast/anchor-podcasts/devmap-podcast', label: 'Stitcher'},
-  { href: 'https://www.breaker.audio/devmap-podcast', label: 'Breaker'},
-  { href: 'https://open.spotify.com/show/1V8gY5mZUsVdE0VAujPD1C', label: 'Spotify'},
-  { href: 'https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy83MGI0YWY4L3BvZGNhc3QvcnNz', label: 'Google Podcasts'},
-  { href: 'https://castbox.fm/channel/id1446889', label: 'Castbox'},
-  { href: 'https://pca.st/g9Fg', label: 'Pocket Casts'}
+  { href: 'https://itunes.apple.com/us/podcast/devmap-podcast/id1437898718', label: 'Apple Podcasts', image: '/static/apple_podcasts.png'},
+  { href: 'https://www.breaker.audio/devmap-podcast', label: 'Breaker', image: '/static/breaker.png'},
+  { href: 'https://castbox.fm/channel/id1446889', label: 'Castbox', image: '/static/castbox.png'},
+  { href: 'https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy83MGI0YWY4L3BvZGNhc3QvcnNz', label: 'Google Podcasts', image: '/static/google_podcasts_outline.png'},
+  { href: 'https://pca.st/g9Fg', label: 'Pocket Casts', image: '/static/pocket_casts.png'},
+  { href: 'https://radiopublic.com/devmap-podcast-8gvzE9', label: 'RadioPublic', image: '/static/radiopublic.png'},
+  { href: 'https://open.spotify.com/show/1V8gY5mZUsVdE0VAujPD1C', label: 'Spotify', image: '/static/spotify.png'},
+  { href: 'https://www.stitcher.com/podcast/anchor-podcasts/devmap-podcast', label: 'Stitcher', image: '/static/stitcher.png'},
 ]
 
 
@@ -26,7 +28,7 @@ const Nav = () => (
             <li key={key}>
               <Link href={href}>
                 <a>
-                  <image src={image} alt={label} />
+                  <img className="icons" src={image} alt={label} />
                 </a>
               </Link>
             </li>
@@ -51,9 +53,9 @@ const Nav = () => (
       .mainNav {
         display: grid;
         grid-template-rows: minmax(30px, 1fr);
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(7, 1fr);
         grid-template-areas:
-          "links links . . appLinks appLinks";
+          ". links links .  appLinks appLinks .";
         justify-content: space-between;
       }
       .pcast-AppsList {
@@ -78,6 +80,10 @@ const Nav = () => (
       }
       a:hover {
         text-decoration: underline;
+      }
+      .icons{
+        height: 30px;
+        width: 30px;
       }
     `}</style>
   </nav>

@@ -1,10 +1,9 @@
 
 const Episodes = () => (
           <div className="row">
-            
-            <iframe src="https://anchor.fm/devmappodcast/embed/episodes/002---The-Technical-Interview-e2eu8u" className="card" frameborder="0" scrolling="no"></iframe>
-            <iframe src="https://anchor.fm/devmappodcast/embed/episodes/001---Getting-a-Brown-Taco-e2bo4m" className="card" frameborder="0" scrolling="no"></iframe>
-            <iframe src="https://anchor.fm/devmappodcast/embed/episodes/000---Pilot-e2aljl/a-a5jass" className="card" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://anchor.fm/devmappodcast/embed/episodes/002---The-Technical-Interview-e2eu8u" className="card" frameBorder="0" scrolling="no"></iframe>
+            <iframe src="https://anchor.fm/devmappodcast/embed/episodes/001---Getting-a-Brown-Taco-e2bo4m" className="card" frameBorder="0" scrolling="no"></iframe>
+            <iframe src="https://anchor.fm/devmappodcast/embed/episodes/000---Pilot-e2aljl/a-a5jass" className="card" frameBorder="0" scrolling="no"></iframe>
             
             <style jsx global>{`
               .row {
