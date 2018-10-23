@@ -16,17 +16,17 @@ const episodesList =  [
 		"title": "Episode---002",
 		"description": "lorem ipsum",
 	}   
-	]
+	];
 
 const Episodes = () => (
         <div className="row">
-			{episodesList.map( ({title, description }) => (
+			{episodesList.map( ({title, description, href }) => (
 				<div className="pcast-player">
 					<Thumbnail />
 					<h2 className="pcast-title">{title}</h2>
 					<p className="pcast-details">{description}</p>
 					<MediaController/>
-					<audio src="{href}" />
+					<audio src={href} />
 				</div>
 			))}
             <style jsx global>{`
