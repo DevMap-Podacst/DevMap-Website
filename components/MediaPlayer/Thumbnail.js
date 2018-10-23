@@ -4,11 +4,11 @@ const PlayerThumbnail = () => (
     <style jsx>{`
         .pcast-thumbnail {
             height: 70px;
-            grid-area: pcastThumbnail;
-            padding: 0 10px 0 0;
+            grid-area: Thumbnail;
+            padding: 0 5px 0 0;
         }
         .pcast-thumbnail img {
-            height: 70px;
+            height: 110px;
         }
         `}</style>
     </div>
