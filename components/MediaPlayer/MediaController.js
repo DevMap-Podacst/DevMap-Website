@@ -5,11 +5,6 @@ import { faPlayCircle, faPlay, faPause, faStepBackward, faStepForward, faVolumeU
 library.add(faPlayCircle, faPlay, faPause, faStepBackward, faStepForward, faVolumeUp, faVolumeDown, faVolumeOff)
 
 
-const _handlePlayPause = () => {
-	this.props.media.playPause()
-}
-
-
 const MediaController = () => (
     <div className="pcast-controls">
 		<button className="pcast-play" >
