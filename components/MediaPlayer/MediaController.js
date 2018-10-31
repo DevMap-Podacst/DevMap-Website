@@ -5,27 +5,31 @@ import { faPlayCircle, faPlay, faPause, faStepBackward, faStepForward, faVolumeU
 library.add(faPlayCircle, faPlay, faPause, faStepBackward, faStepForward, faVolumeUp, faVolumeDown, faVolumeOff)
 
 
+const _handlePlayPause = () => {
+	this.props.media.playPause()
+}
+
+
 const MediaController = () => (
     <div className="pcast-controls">
-		<button class="pcast-play">
-			<FontAwesomeIcon icon="play" size="lg" />
+		<button className="pcast-play" >
+			<FontAwesomeIcon icon="play" size="sm" />
 		</button>
-		<button class="pcast-pause">
-			<FontAwesomeIcon icon="pause" size="lg" />
+		<button className="pcast-pause">
+			<FontAwesomeIcon icon="pause" size="sm" />
 		</button>
-		<button class="pcast-rewind">
-			<FontAwesomeIcon icon="step-backward" size="lg" />
+		<button className="pcast-rewind">
+			<FontAwesomeIcon icon="step-backward" size="sm" />
 		</button>
-		<button class="pcast-speed">1x</button>
-		<button class="pcast-skip">
-			<FontAwesomeIcon icon="step-forward" size="lg" />
+		<button className="pcast-speed">1x</button>
+		<button className="pcast-skip">
+			<FontAwesomeIcon icon="step-forward" size="sm" />
 		</button>
-
-		<span class="pcast-currenttime pcast-time">00:00</span>
-		<progress class="pcast-progress" value="0"></progress>
-		<span class="pcast-duration pcast-time">00:00</span>
-		<button class="pcast-mute">
-			<FontAwesomeIcon icon="volume-down" size="lg" />
+			<p className="pcast-currenttime pcast-time">00:00</p>
+			<progress className="pcast-progress" value="0"></progress>
+			<p className="pcast-duration pcast-time">00:00</p>
+		<button className="pcast-mute">
+			<FontAwesomeIcon icon="volume-down" size="sm" />
 		</button>
 	<style jsx>{`
 		/* Pcast Player */
@@ -50,30 +54,31 @@ const MediaController = () => (
 			border: 0;
 			border-radius: 2px;
 			padding: 5px;
+			font-size: 22px;
 			line-height: 22px;
 			-webkit-appreance: none;
 			min-width: 32px;
 		  }
-		  progress {
+		  .pcast-progress {
 			height: 13px;
 			width: calc(100% - 281px);
 			appearance: none;
+			margin: 8px 0;
 		  }
-		  .pcast-controls progress[value]::-webkit-progress-bar {
+		  .pcast-controls .pcast-progress[value]::-webkit-progress-bar {
 			background-color: #555;
 			border-radius: 0;
 			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 		  }
-		  .pcast-controls progress[value]::-webkit-progress-value {
+		  .pcast-controls .pcast-progress[value]::-webkit-progress-value {
 			background: #fff;
 		  }
 		  .pcast-controls .pcast-time {
 			display: inline-block;
 			font-size: 13px;
-			padding: 0 5px;
-			text-align: center;
-			width: 4em;
-		  }
+			padding: 0 4px;
+    	    margin: 8px 0;
+		  }	
 		  .pcast-controls .pcast-speed {
 			width: 2.5em;
 		  }

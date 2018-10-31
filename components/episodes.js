@@ -2,31 +2,31 @@ import Thumbnail from './MediaPlayer/Thumbnail'
 import MediaController from './MediaPlayer/MediaController'
 const episodesList =  [
 	{ 
-		"href": "https://anchor.fm/devmappodcast",
-		"title": "Episode---000",
-		"description": "lorem ipsum",
+		"href": "http://anchor.fm/devmappodcast",
+		"title": "Episode---000| Pilot",
+		"description": "In our pilot episode, we tell you what to expect from this podcast.",
 	},
 	{ 
-		"href": "https://anchor.fm/devmappodcast",
-		"title": "Episode---001",
-		"description": "lorem ipsum",
+		"href": "http://anchor.fm/devmappodcast",
+		"title": "Episode---001| Getting a Brown Taco",
+		"description": "In our first episode, Sukari, Mary, Jason, and Omar talk about getting that first job",
 	},
 	{ 
-		"href": "https://anchor.fm/devmappodcast",
-		"title": "Episode---002",
-		"description": "lorem ipsum",
+		"href": "https://anchor.fm/devmappodcast/episodes/002---The-Technical-Interview-e2eu8u",
+		"title": "Episode---002| The Technical Interview",
+		"description": "Sukari, Jason, and Omar talk about how to master the technical interview and share some techniques on how to",
 	}   
 	];
 
 const Episodes = () => (
         <div className="row">
-			{episodesList.map( ({title, description, href }) => (
-				<div className="pcast-player">
+			{episodesList.map( ({key, title, description, href }) => (
+				<div key={title} className="pcast-player">
 					<Thumbnail />
-					<h2 className="pcast-title">{title}</h2>
-					<p className="pcast-details">{description}</p>
+					<h2 className="pcast-text pcast-title">{title}</h2>
+					<p className="pcast-text pcast-details">{description}</p>
 					<MediaController/>
-					<audio src={href} />
+					
 				</div>
 			))}
             <style jsx global>{`
@@ -45,27 +45,39 @@ const Episodes = () => (
                 grid-template-rows: auto;
                 grid-template-columns: max-content 1fr;
                 grid-template-areas:
-				  "Thumbnail Player"
-				  "Thumbnail Player";
+				  "Thumbnail Title"
+				  "Thumbnail Description"
+				  "Thumbnail Media";
 				padding: 0;
 				margin: 8px 18px;
-				background: white;
+				background: #000;
                 width: 100%;
                 max-width: 600px;
                 height: 110px;
 				justify-self: center;        
 			  }
+			  .pcast-text{
+				  color: #FFF;
+				  margin: 0;
+				  padding: 0;
+			  }
 			  .pcast-title {
-				  grid-area: Player;
+				  grid-area: Title;
 				  justify-self: stretch;
 				  align-self: start;
 				  margin: 0;
+				  grid-column: 2/5;
+				  grid-row: 1/2;
+				  font-size: 1.1rem;
 			  }
 			  .pcast-details {
-				  grid-area: Player;
+				  grid-area: Description;
 				  justify-self: stretch;
 				  align-self: center;
 				  margin: 0;
+				  grid-column: 2/5;
+				  grid-row: 2/3;
+				  overflow: hidden;
 			  }
 
         	`}</style>

@@ -6,6 +6,8 @@ const PlayerThumbnail = () => (
             height: 70px;
             grid-area: Thumbnail;
             padding: 0 5px 0 0;
+            grid-column: 1/2;
+            grid-row: 1/3;
         }
         .pcast-thumbnail img {
             height: 110px;

@@ -24,8 +24,8 @@ const Nav = () => (
       </li>
       <ul className='pcast-AppsList'>
         <li>Listen on:</li>
-        {links.map(({ key, href, label, image }) => (
-            <li key={key}>
+        {links.map(({href, label, image }) => (
+            <li key={label}>
               <Link href={href}>
                 <a>
                   <img className="icons" src={image} alt={label} />
