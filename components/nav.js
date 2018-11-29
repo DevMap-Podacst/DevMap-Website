@@ -17,7 +17,7 @@ const links = [
 const Nav = () => (
   <nav>
     <ul className='mainNav'>
-      <li className='devmap-Links'>
+      <li class='devmap-Links'>
         <Link prefetch href="/">
           <a>Home</a>
         </Link>
