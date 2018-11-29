@@ -1,7 +1,7 @@
 const Title = () => (
   <div className="page-InfoContainer">
     <img src="../static/Dev-Map-Logo_400x250.png" className="heroImage" />
-	<h1 className="title">Welcome to DevMap!</h1>
+	<h1 className="title">Welcome to devmap!</h1>
 	<p className="description">
 	The Podcast for Junior Developers and the cure for Imposter Syndrome
 	</p>
