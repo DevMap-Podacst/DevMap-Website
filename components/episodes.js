@@ -11,19 +11,11 @@ const Episodes = () => (
             
             <style jsx global>{`
               .row {
-                display: grid;
-                grid-template-rows: auto;
-                grid-template-columns: repeat(6, 1fr);
-                grid-template-areas:
-                  ". logo logo ." 
-                  ". info info ."
-                  ". episodes episodes .";
-                justify-content: center;
+                display: flex;
+                flex-flow: column wrap;
                 align-content: center;
                 max-width: 880px;
                 margin: 80px auto 40px;
-                display: flex;
-                flex-direction: row;
                 justify-content: space-around;
               }
               .card {
