@@ -57,6 +57,7 @@ const Nav = () => (
         grid-template-areas:
           ". links links .  appLinks appLinks .";
         justify-content: space-between;
+        list-style:none;
       }
       .pcast-AppsList {
         padding: 4px 16px;
