@@ -45,7 +45,7 @@
         <hr class="h-px mt-1 bg-gray-200 border-none">
         <div class="mx-8 py-4 b">
             <div class="mt-1">
-                <p class="text-sm text-grey mt-1">{episode.Description}</p>
+                <p class="text-sm text-grey mt-1">{@html episode.Description}</p>
             </div>
         </div>
     </div>
