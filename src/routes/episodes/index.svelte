@@ -26,8 +26,9 @@
 </script>
 
 <script>
-    import Episode from './_Episode.svelte'
+   import Episode from './_Episode.svelte'
    export let episodes;  
+   $: console.log(episodes)
 </script>
 
 

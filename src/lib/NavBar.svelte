@@ -3,31 +3,31 @@
     const streamers = [
         { href: 'https://anchor.fm/devmappodcast',
           label: 'Anchor.FM',
-          image: '/static/anchor.png'},
+          image: '/anchor.png'},
         { href: 'https://itunes.apple.com/us/podcast/devmap-podcast/id1437898718',
           label: 'Apple Podcasts',
-          image: '/static/apple_podcasts.png'},
+          image: '/apple_podcasts.png'},
         { href: 'https://www.breaker.audio/devmap-podcast',
           label: 'Breaker',
-          image: '/static/breaker.png'},
+          image: '/breaker.png'},
         { href: 'https://castbox.fm/channel/id1446889',
           label: 'Castbox',
-          image: '/static/castbox.png'},
+          image: '/castbox.png'},
         { href: 'https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy83MGI0YWY4L3BvZGNhc3QvcnNz',
           label: 'Google Podcasts',
-          image: '/static/google_podcasts_outline.png'},
+          image: '/google_podcasts_outline.png'},
         { href: 'https://pca.st/g9Fg',
           label: 'Pocket Casts',
-          image: '/static/pocket_casts.png'},
+          image: '/pocket_casts.png'},
         { href: 'https://radiopublic.com/devmap-podcast-8gvzE9',
           label: 'RadioPublic',
-          image: '/static/radiopublic.png'},
+          image: '/radiopublic.png'},
         { href: 'https://open.spotify.com/show/1V8gY5mZUsVdE0VAujPD1C',
           label: 'Spotify',
-          image: '/static/spotify.png'},
+          image: '/spotify.png'},
         { href: 'https://www.stitcher.com/podcast/anchor-podcasts/devmap-podcast',
           label: 'Stitcher',
-          image: '/static/stitcher.png'}
+          image: '/stitcher.png'}
     ]
 
 
@@ -56,9 +56,6 @@
           </li>
           <li>
             <a class="block text-white text-xl px-4 py-1 md:p-2 lg:px-4 hover:text-purple-600" href="/blog" title="Blog">Blog</a>
-          </li>
-          <li>
-            <a class="block text-white text-xl px-4 py-1 md:p-2 lg:px-4 hover:text-purple-600" href="/contact" title="Contact Us">Contact Us</a>
           </li>
         </ul>
 

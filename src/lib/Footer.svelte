@@ -27,7 +27,6 @@
                 <div class="-mx-4">
                   <a href="/episodes" class="px-4 text-sm">Episodes</a>
                   <a href="/blog" class="px-4 text-sm">Blog</a>
-                  <a href="/contact" class="px-4 text-sm">Contact</a>
                   </div>
             </div>
         </div>
